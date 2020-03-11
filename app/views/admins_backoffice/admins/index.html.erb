@@ -1,0 +1,30 @@
+
+<p><h1>ADMIN</h1></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @admins.each do |admin| %>
+  <tbody>
+    <tr>
+      <td><%= admin.id %></td>
+      <td><%= admin.email %></td>
+      <td style="width: 100px">
+        <button type="button" class="btn btn-primary btn-circle">
+          <i class="fa fa-edit"></i>
+        </button>
+        <button type="button" class="btn btn-danger btn-circle">
+            <i class="fa fa-minus"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+    
+  <% end %>
+  
+</table>
