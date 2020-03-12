@@ -6,7 +6,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <div class="container">
-  <h2>Listando Administradores</h2>
+  <h2>Editando Administradores</h2>
+
+  <% if @admin.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert"
+        aria-hidden="true">×</button>
+
+      <ul>
+        <% @admin.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <%= form_with(model: [ :admins_backoffice, @admin ], local: true) do
 |form| %>
 
