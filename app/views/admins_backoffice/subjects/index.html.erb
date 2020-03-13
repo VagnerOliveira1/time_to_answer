@@ -1,11 +1,11 @@
 
-<p><h1>Assunto</h1></p>
+<p><h1><%=t('messages.listing',model: @subjects.model_name.human(count: 2))%></h1></p>
 <div class="table-responsive">
   <table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>ID</th>
-      <th>Description</th>
+      <th><%= translate_field(@subjects, :description) %></th>
       <th>
        <%= link_to new_admins_backoffice_subject_path, class:"btn btn-success btn-circle" do %>
         <i class="fa fa-plus"></i>
@@ -26,7 +26,7 @@
         <% end %>
 
         <%= link_to admins_backoffice_subject_path(subject), method: :delete, class:"btn btn-danger btn-circle",data:{
-          confirm:" Certeza ao excluir subject?"
+          confirm:t('messages.confirm_with', item: subject.description.truncate(15))
         } do %>
         <i class="fa fa-minus"></i>
         <% end %>
