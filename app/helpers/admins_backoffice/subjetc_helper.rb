@@ -1,0 +1,2 @@
+module AdminsBackoffice::SubjetcHelper
+end

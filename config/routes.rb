@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get 'welcome/index'
     #resources :admins, only: [:index, :edit, :update] #Admins
     resources :admins
+    resources :subjects
   end
   namespace :users_backoffice do 
     get 'welcome/index' #Dashboard

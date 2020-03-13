@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_12_185051) do
+ActiveRecord::Schema.define(version: 2020_03_13_000906) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 2020_03_12_185051) do
   end
 
   create_table "answers", force: :cascade do |t|
-    t.text "description", null: false
     t.integer "question_id"
-    t.boolean "correct", default: false
+    t.text "descripition", null: false
+    t.boolean "correct"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
@@ -35,10 +35,8 @@ ActiveRecord::Schema.define(version: 2020_03_12_185051) do
 
   create_table "questions", force: :cascade do |t|
     t.text "description", null: false
-    t.integer "subjetc_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["subjetc_id"], name: "index_questions_on_subjetc_id"
   end
 
   create_table "subjects", force: :cascade do |t|
