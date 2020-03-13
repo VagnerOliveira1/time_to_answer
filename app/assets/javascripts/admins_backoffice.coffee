@@ -6,6 +6,7 @@
 //= require jquery.easing/jquery.easing.compatibility
 //= require sb-admin-2.min.js
 //= require bootstrap-growl-ifightcrime/jquery.bootstrap-growl
+//= require cocoon 
 
 
 #  <!-- Bootstrap core JavaScript-->
