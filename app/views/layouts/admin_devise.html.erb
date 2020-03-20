@@ -10,7 +10,7 @@
             <%= csrf_meta_tags %>
             <%= csp_meta_tag %>
             <%= stylesheet_link_tag 'application' %>
-            <%= stylesheet_link_tag 'admins_backoffice' %>
+            <%#= stylesheet_link_tag 'admins_backoffice' %>
     </head>
       <body>
 
@@ -18,7 +18,7 @@
           <%= yield %>
         </div>
         <%= javascript_include_tag 'application' %>
-        <%= javascript_include_tag 'admins_backoffice' %>
+        <%#= javascript_include_tag 'admins_backoffice' %>
         <% if flash %>
           <% flash.each do |key, value| %>
             <%= javascript_tag do %>

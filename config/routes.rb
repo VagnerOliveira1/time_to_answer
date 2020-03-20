@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get 'welcome/index' #Dashboard
     get 'profile', to:'profile#edit'
     patch 'profile', to: 'profile#update'
+    get 'zip_code', to: 'zip_code#show'
   end
   
   devise_for :users
