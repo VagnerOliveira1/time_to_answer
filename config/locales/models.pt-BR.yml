@@ -26,6 +26,14 @@
         email: Email
         created_at: Criado em
         updated_at: Atualizado em
+      user_profile:
+        id: Código
+        address: Endereço
+        zip_code: CEP
+        gender: Sexo
+        birthdate: Data de Nascimento
+        created_at: Criado em
+        updated_at: Atualizado em
       subject:
         id: Código
         description: Descrição
